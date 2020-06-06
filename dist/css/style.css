@@ -202,7 +202,7 @@ header .page-title {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem 1rem 5rem 1rem;
+  padding: 1rem 1rem 7rem 1rem;
   position: relative;
 }
 
@@ -220,6 +220,20 @@ header .page-title {
 .choice .image:hover {
   box-shadow: 0 0 2rem 0 rgba(255, 238, 163, 0.5);
   transform: scale(1.03);
+}
+
+.choice .image:hover span {
+  visibility: visible;
+}
+
+.choice .image span {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3rem;
+  margin-top: 5px;
+  display: block;
+  text-align: center;
+  visibility: hidden;
+  transition: visibility 200ms ease-in;
 }
 
 .choice .image img {

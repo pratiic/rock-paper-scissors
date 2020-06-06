@@ -1,6 +1,6 @@
 .choice {
 	@include flex(center, center);
-	padding: 1rem 1rem 5rem 1rem;
+	padding: 1rem 1rem 7rem 1rem;
 	position: relative;
 
 	.image {
@@ -16,6 +16,20 @@
 		&:hover {
 			box-shadow: 0 0 2rem 0 rgba(255, 238, 163, 0.5);
 			transform: scale(1.03);
+		}
+
+		&:hover span {
+			visibility: visible;
+		}
+
+		span {
+			font-family: $font-stack-secondary;
+			font-size: 1.3rem;
+			margin-top: 5px;
+			display: block;
+			text-align: center;
+			visibility: hidden;
+			@include trans(visibility, 200ms);
 		}
 
 		img {
