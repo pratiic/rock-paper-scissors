@@ -40,6 +40,9 @@
 			>
 				scoreboard
 			</h3>
+
+			<div class="choice-display user-choice-display"></div>
+
 			<div class="scoreboard-main">
 				<div class="tag user-tag uppercase">you</div>
 				<div class="tag computer-tag uppercase">me</div>
@@ -47,20 +50,34 @@
 				<span class="dash">-</span>
 				<span class="score computer-score text-large">0</span>
 			</div>
+
+			<div class="choice-display computer-choice-display"></div>
 		</div>
 
 		<!-- CHOICE -->
-		<div class="choice">
-			<div class="rock-container rock-image image">
-				<img src="assets/images/rock.png" class="paper-image" alt="" />
+		<div class="choice-section">
+			<div class="rock-container image" id="0">
+				<img
+					src="assets/images/rock.png"
+					class="rock-image choice"
+					alt=""
+				/>
 				<span class="rock-text uppercase">rock</span>
 			</div>
-			<div class="paper-container paper-image image">
-				<img src="assets/images/paper.png" class="paper-image" alt="" />
+			<div class="paper-container image" id="1">
+				<img
+					src="assets/images/paper.png"
+					class="paper-image choice"
+					alt=""
+				/>
 				<span class="paper-text uppercase">paper</span>
 			</div>
-			<div class="scissors-container scissors-image image">
-				<img src="assets/images/scissors.png" alt="" />
+			<div class="scissors-container image" id="2">
+				<img
+					src="assets/images/scissors.png"
+					alt=""
+					class="scissors-image choice"
+				/>
 				<span class="scissors-text uppercase">scissors</span>
 			</div>
 

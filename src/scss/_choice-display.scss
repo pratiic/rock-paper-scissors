@@ -1,0 +1,16 @@
+.choice-display {
+	height: 15rem;
+	width: 15rem;
+	position: absolute;
+	top: 65%;
+	transform: translateY(-50%);
+	@include flex(center, center);
+
+	&.user-choice-display {
+		left: 20%;
+	}
+
+	&.computer-choice-display {
+		right: 20%;
+	}
+}

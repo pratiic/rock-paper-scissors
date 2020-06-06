@@ -140,6 +140,7 @@ header .page-title {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 .scoreboard .score-board-header {
@@ -198,7 +199,7 @@ header .page-title {
   font-weight: bolder;
 }
 
-.choice {
+.choice-section {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -206,7 +207,7 @@ header .page-title {
   position: relative;
 }
 
-.choice .image {
+.choice-section .image {
   width: 7rem;
   height: 7rem;
   padding: 0.3rem;
@@ -217,16 +218,20 @@ header .page-title {
   transition: transform 100ms ease-in;
 }
 
-.choice .image:hover {
+.choice-section .image:hover {
   box-shadow: 0 0 2rem 0 rgba(255, 238, 163, 0.5);
   transform: scale(1.03);
 }
 
-.choice .image:hover span {
+.choice-section .image:hover span {
   visibility: visible;
 }
 
-.choice .image span {
+.choice-section .image:active {
+  transform: translateY(1px);
+}
+
+.choice-section .image span {
   font-family: "Open Sans", sans-serif;
   font-size: 1.3rem;
   margin-top: 5px;
@@ -236,19 +241,60 @@ header .page-title {
   transition: visibility 200ms ease-in;
 }
 
-.choice .image img {
+.choice-section .image img {
   height: 100%;
   width: 100%;
 }
 
-.choice .image.paper-image {
+.choice-section .image.paper-container {
   margin: 0 5rem;
 }
 
-.choice h3 {
+.choice-section .image.animate {
+  animation-name: gameAnimation;
+  animation-duration: 450ms;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+.choice-section h3 {
   position: absolute;
   left: 50%;
   bottom: 0;
   transform: translateX(-50%);
   letter-spacing: 5px;
+}
+
+@keyframes gameAnimation {
+  0% {
+    transform: scale(1);
+    border: 2px solid #ffeea3;
+  }
+  50% {
+    transform: scale(1.05);
+    border: 2px solid #8db600;
+  }
+  100% {
+    transform: scale(1);
+    border: 2px solid #ffeea3;
+  }
+}
+
+.choice-display {
+  height: 15rem;
+  width: 15rem;
+  position: absolute;
+  top: 65%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choice-display.user-choice-display {
+  left: 20%;
+}
+
+.choice-display.computer-choice-display {
+  right: 20%;
 }

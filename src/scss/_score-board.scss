@@ -1,6 +1,7 @@
 .scoreboard {
 	@include flex(center, center);
 	flex-direction: column;
+	position: relative;
 
 	.score-board-header {
 		letter-spacing: 7px;
