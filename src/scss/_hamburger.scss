@@ -1,0 +1,22 @@
+.hamburger {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	background-color: $background;
+	padding: 1.5rem;
+	cursor: pointer;
+
+	.line {
+		width: 2.7rem;
+		height: 4px;
+		margin-bottom: 3px;
+		background-color: $primary-blue;
+		border-radius: 3px;
+	}
+
+	transition: transform 150ms ease-in;
+
+	&:hover {
+		transform: scale(1.2);
+	}
+}
