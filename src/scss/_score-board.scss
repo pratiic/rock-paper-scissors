@@ -1,0 +1,58 @@
+.scoreboard {
+	@include flex(center, center);
+	flex-direction: column;
+
+	.score-board-header {
+		letter-spacing: 7px;
+		color: $primary-blue;
+	}
+
+	.scoreboard-main {
+		height: 15rem;
+		width: 35rem;
+		border: 3px solid white;
+		border-radius: 5px;
+		position: relative;
+		@include flex(center, center);
+
+		.tag {
+			font-family: $font-stack-secondary;
+			font-size: 1.5rem;
+			font-weight: 700;
+			padding: 0.5rem 1.5rem;
+			background-color: $red;
+			color: white;
+			border-radius: 5px;
+			position: absolute;
+		}
+
+		.user-tag {
+			left: 0;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.computer-tag {
+			right: 0;
+			top: 50%;
+			transform: translate(50%, -50%);
+		}
+
+		.score {
+			font-weight: bolder;
+		}
+
+		.user-score {
+			margin-right: 1rem;
+		}
+
+		.computer-score {
+			margin-left: 1rem;
+		}
+
+		.dash {
+			font-size: 3rem;
+			font-weight: bolder;
+		}
+	}
+}

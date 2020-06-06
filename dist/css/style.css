@@ -134,3 +134,66 @@ header .page-title {
   letter-spacing: 7px;
   margin: 3rem 0;
 }
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.scoreboard .score-board-header {
+  letter-spacing: 7px;
+  color: #007bff;
+}
+
+.scoreboard .scoreboard-main {
+  height: 15rem;
+  width: 35rem;
+  border: 3px solid white;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scoreboard .scoreboard-main .tag {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.5rem 1.5rem;
+  background-color: #800000;
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.scoreboard .scoreboard-main .user-tag {
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.scoreboard .scoreboard-main .computer-tag {
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.scoreboard .scoreboard-main .score {
+  font-weight: bolder;
+}
+
+.scoreboard .scoreboard-main .user-score {
+  margin-right: 1rem;
+}
+
+.scoreboard .scoreboard-main .computer-score {
+  margin-left: 1rem;
+}
+
+.scoreboard .scoreboard-main .dash {
+  font-size: 3rem;
+  font-weight: bolder;
+}
