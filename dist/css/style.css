@@ -6,13 +6,20 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: simplifica;
+  src: url(../../assets/fonts/simplifica.ttf);
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: simplifica, sans-serif;
   overflow-x: hidden;
+  background-color: #262632;
+  color: white;
 }
 
 a {
@@ -65,4 +72,65 @@ li {
 
 .button:active {
   transform: translateY(1px);
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.p-3 {
+  padding: 3rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-large {
+  font-size: 4rem;
+}
+
+.text-medium {
+  font-size: 2.5rem;
+}
+
+.text-small {
+  font-size: 1.75rem;
+}
+
+header .page-title {
+  letter-spacing: 7px;
+  margin: 3rem 0;
 }

@@ -6,13 +6,20 @@
 	box-sizing: border-box;
 }
 
+@font-face {
+	font-family: simplifica;
+	src: url(../../assets/fonts/simplifica.ttf);
+}
+
 html {
 	font-size: 62.5%;
 }
 
 body {
-	font-family: $font-stack;
+	font-family: $font-stack-primary;
 	overflow-x: hidden;
+	background-color: $dark-blue;
+	color: white;
 }
 
 a {
