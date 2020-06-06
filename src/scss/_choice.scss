@@ -1,0 +1,38 @@
+.choice {
+	@include flex(center, center);
+	padding: 1rem 1rem 5rem 1rem;
+	position: relative;
+
+	.image {
+		width: 7rem;
+		height: 7rem;
+		padding: 0.3rem;
+		border: 2px solid $color-choice;
+		border-radius: 50%;
+		cursor: pointer;
+		@include trans(box-shadow, 200ms);
+		@include trans(transform, 100ms);
+
+		&:hover {
+			box-shadow: 0 0 2rem 0 rgba(255, 238, 163, 0.5);
+			transform: scale(1.03);
+		}
+
+		img {
+			height: 100%;
+			width: 100%;
+		}
+
+		&.paper-image {
+			margin: 0 5rem;
+		}
+	}
+
+	h3 {
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translateX(-50%);
+		letter-spacing: 5px;
+	}
+}

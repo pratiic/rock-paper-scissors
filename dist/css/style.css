@@ -197,3 +197,44 @@ header .page-title {
   font-size: 3rem;
   font-weight: bolder;
 }
+
+.choice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1rem 5rem 1rem;
+  position: relative;
+}
+
+.choice .image {
+  width: 7rem;
+  height: 7rem;
+  padding: 0.3rem;
+  border: 2px solid #ffeea3;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: box-shadow 200ms ease-in;
+  transition: transform 100ms ease-in;
+}
+
+.choice .image:hover {
+  box-shadow: 0 0 2rem 0 rgba(255, 238, 163, 0.5);
+  transform: scale(1.03);
+}
+
+.choice .image img {
+  height: 100%;
+  width: 100%;
+}
+
+.choice .image.paper-image {
+  margin: 0 5rem;
+}
+
+.choice h3 {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  letter-spacing: 5px;
+}
