@@ -8,13 +8,6 @@ let computerChoice;
 
 let winner;
 
-// let winningMessages = {
-// 	rock: "rock crushes scissors",
-// 	paper: "paper covers rock",
-// 	scissors: "scissors cuts paper",
-// 	tied: "nobody wins",
-// };
-
 let winningMessageRock = `<span class = "winner-choice">rock</span> crushes <span class = "loser-choice"> scissors </span>`;
 
 let winningMessagePaper = `<span class = "winner-choice">paper</span> covers <span class = "loser-choice"> rock </span>`;
@@ -24,6 +17,10 @@ let winningMessageScissors = `<span class = "winner-choice">scissors</span> cuts
 let winningMessageTied = "nobody wins";
 
 let winningMessage;
+
+let userScore = 0;
+
+let computerScore = 0;
 
 export let playTheGame = function (id) {
 	setUserChoice(id);
@@ -131,5 +128,36 @@ let determineWinner = function (user, computer) {
 		}
 	}
 
+	showWinner(winningMessage);
+
+	updateScore(winner);
+};
+
+let showWinner = function (winningMessage) {
 	elements.result.innerHTML = winningMessage;
+};
+
+let updateScore = function (winner) {
+	if (winner === "user") {
+		userScore++;
+		elements.userScore.innerText = userScore;
+	} else if (winner === "computer") {
+		computerScore++;
+		elements.computerScore.innerText = computerScore;
+	}
+
+	updateWinnerTag(userScore, computerScore);
+};
+
+let updateWinnerTag = function (userScore, computerScore) {
+	if (userScore > computerScore) {
+		elements.winnerTag.classList.remove("computer-winning");
+		elements.winnerTag.classList.add("user-winning");
+	} else if (userScore < computerScore) {
+		elements.winnerTag.classList.remove("user-winning");
+		elements.winnerTag.classList.add("computer-winning");
+	} else {
+		elements.winnerTag.classList.remove("computer-winning");
+		elements.winnerTag.classList.remove("user-winning");
+	}
 };
