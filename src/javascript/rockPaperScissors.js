@@ -56,15 +56,17 @@ let showAnimation = function () {
 
 let showUserChoice = function (userChoice) {
 	elements.userChoiceContainer.innerHTML = `
+        <span class="uppercase text-medium text-center" style = "display: block;">your choice</span>
+
         <div class="${userChoice}-container image" id="0">
-            <span class="uppercase text-medium text-center" style = "display: block;">your choice</span>
-            <img
+             <img
                 src="assets/images/${userChoice}.png"
                 class="${userChoice}-image choice"
                 alt=""
             />
-            <span class="${userChoice}-text uppercase text-medium text-center" style = "display: block;">${userChoice}</span>
         </div>
+
+        <span class="uppercase text-medium text-center" style = "display: block;">${userChoice}</span>
     `;
 };
 
@@ -73,15 +75,15 @@ let showComputerChoice = function (computerChoice) {
 
 	setTimeout(function () {
 		elements.computerChoiceContainer.innerHTML = `
-        <div class="${computerChoice}-container image" id="0">
             <span class="uppercase text-medium text-center" style = "display: block;">my choice</span>
-            <img
-                src="assets/images/${computerChoice}.png"
-                class="${computerChoice}-image choice"
-                alt=""
-            />
+            <div class="${computerChoice}-container image" id="0">
+                <img
+                    src="assets/images/${computerChoice}.png"
+                    class="${computerChoice}-image choice"
+                    alt=""
+                />
+            </div>
             <span class="${computerChoice}-text uppercase text-medium text-center" style = "display: block;">${computerChoice}</span>
-        </div>
     `;
 
 		determineWinner(userChoice, computerChoice);

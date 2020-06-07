@@ -11,4 +11,5 @@ export let elements = {
 	userScore: document.querySelector(".user-score"),
 	computerScore: document.querySelector(".computer-score"),
 	winnerTag: document.querySelector(".winner-tag"),
+	resetButton: document.querySelector(".reset-button"),
 };

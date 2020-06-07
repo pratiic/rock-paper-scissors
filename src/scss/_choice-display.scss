@@ -1,16 +1,39 @@
 .choice-display {
-	height: 15rem;
-	width: 15rem;
 	position: absolute;
-	top: 65%;
+	top: 50%;
 	transform: translateY(-50%);
-	@include flex(center, center);
+	@include flex(space-between, center);
+	flex-direction: column;
+	padding: 1rem;
+	font-size: 3rem;
 
 	&.user-choice-display {
-		left: 20%;
+		left: -50%;
 	}
 
 	&.computer-choice-display {
-		right: 20%;
+		right: -50%;
+	}
+
+	.image {
+		width: 7rem;
+		height: 7rem;
+
+		img {
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.choice-display {
+		&.user-choice-display {
+			left: -40%;
+		}
+
+		&.computer-choice-display {
+			right: -40%;
+		}
 	}
 }

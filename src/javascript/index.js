@@ -6,3 +6,7 @@ elements.choiceSection.addEventListener("click", (event) => {
 		playTheGame(event.target.parentNode.id);
 	}
 });
+
+elements.resetButton.addEventListener("click", () => {
+	location.reload();
+});
