@@ -6,6 +6,25 @@ let userChoice;
 
 let computerChoice;
 
+let winner;
+
+// let winningMessages = {
+// 	rock: "rock crushes scissors",
+// 	paper: "paper covers rock",
+// 	scissors: "scissors cuts paper",
+// 	tied: "nobody wins",
+// };
+
+let winningMessageRock = `<span class = "winner-choice">rock</span> crushes <span class = "loser-choice"> scissors </span>`;
+
+let winningMessagePaper = `<span class = "winner-choice">paper</span> covers <span class = "loser-choice"> rock </span>`;
+
+let winningMessageScissors = `<span class = "winner-choice">scissors</span> cuts <span class = "loser-choice"> paper </span>`;
+
+let winningMessageTied = "nobody wins";
+
+let winningMessage;
+
 export let playTheGame = function (id) {
 	setUserChoice(id);
 
@@ -67,5 +86,50 @@ let showComputerChoice = function (computerChoice) {
             <span class="${computerChoice}-text uppercase text-medium text-center" style = "display: block;">${computerChoice}</span>
         </div>
     `;
+
+		determineWinner(userChoice, computerChoice);
 	}, 1000);
+};
+
+let determineWinner = function (user, computer) {
+	if (user === "rock") {
+		if (computer === "paper") {
+			winner = "computer";
+			winningMessage = `${winningMessagePaper} i win`;
+		} else if (computer === "scissors") {
+			winner = "user";
+			winningMessage = `${winningMessageRock} you win`;
+		} else {
+			winner = "tied";
+			winningMessage = winningMessageTied;
+		}
+	}
+
+	if (user === "paper") {
+		if (computer === "rock") {
+			winner = "user";
+			winningMessage = `${winningMessagePaper} you win`;
+		} else if (computer === "scissors") {
+			winner = "computer";
+			winningMessage = `${winningMessageScissors} i win`;
+		} else {
+			winner = "tied";
+			winningMessage = winningMessageTied;
+		}
+	}
+
+	if (user === "scissors") {
+		if (computer === "rock") {
+			winner = "computer";
+			winningMessage = `${winningMessageRock} i win`;
+		} else if (computer === "paper") {
+			winner = "user";
+			winningMessage = `${winningMessageScissors} you win`;
+		} else {
+			winner = "tied";
+			winningMessage = winningMessageTied;
+		}
+	}
+
+	elements.result.innerHTML = winningMessage;
 };

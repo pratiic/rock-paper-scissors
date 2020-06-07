@@ -7,4 +7,5 @@ export let elements = {
 	scissors: document.querySelector(".scissors-container"),
 	userChoiceContainer: document.querySelector(".user-choice-display"),
 	computerChoiceContainer: document.querySelector(".computer-choice-display"),
+	result: document.querySelector(".result"),
 };

@@ -298,3 +298,22 @@ header .page-title {
 .choice-display.computer-choice-display {
   right: 20%;
 }
+
+.result {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+}
+
+.result .winner-choice,
+.result .loser-choice {
+  font-size: 3rem;
+}
+
+.result .winner-choice {
+  color: #007bff;
+}
+
+.result .loser-choice {
+  color: #800000;
+}
