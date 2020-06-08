@@ -1,10 +1,22 @@
 .reset-button {
 	position: absolute;
-	left: 4rem;
-	bottom: 4rem;
+	left: 0;
+	top: 0;
 	background-color: $red;
 	color: white;
 	border: none;
 	outline: none;
 	padding: 1rem 1.5rem;
+}
+
+@media screen and (max-width: 500px) {
+	.reset-button {
+		top: 50%;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.reset-button {
+		top: 90%;
+	}
 }

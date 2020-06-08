@@ -56,7 +56,7 @@ let showAnimation = function () {
 
 let showUserChoice = function (userChoice) {
 	elements.userChoiceContainer.innerHTML = `
-        <span class="uppercase text-medium text-center" style = "display: block;">your choice</span>
+        <span class="uppercase text-medium text-center hide-extra-small" style = "display: block;">your choice</span>
 
         <div class="${userChoice}-container image" id="0">
              <img
@@ -75,7 +75,7 @@ let showComputerChoice = function (computerChoice) {
 
 	setTimeout(function () {
 		elements.computerChoiceContainer.innerHTML = `
-            <span class="uppercase text-medium text-center" style = "display: block;">my choice</span>
+            <span class="uppercase text-medium text-center hide-extra-small" style = "display: block;">my choice</span>
             <div class="${computerChoice}-container image" id="0">
                 <img
                     src="assets/images/${computerChoice}.png"

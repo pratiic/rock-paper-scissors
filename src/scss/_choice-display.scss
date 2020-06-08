@@ -5,7 +5,11 @@
 	@include flex(space-between, center);
 	flex-direction: column;
 	padding: 1rem;
-	font-size: 3rem;
+	//font-size: 3rem;
+
+	span {
+		font-size: 1.7rem;
+	}
 
 	&.user-choice-display {
 		left: -50%;
@@ -16,8 +20,8 @@
 	}
 
 	.image {
-		width: 7rem;
-		height: 7rem;
+		width: 6rem;
+		height: 6rem;
 
 		img {
 			height: 100%;
@@ -29,11 +33,37 @@
 @media screen and (max-width: 550px) {
 	.choice-display {
 		&.user-choice-display {
-			left: -40%;
+			left: -45%;
 		}
 
 		&.computer-choice-display {
-			right: -40%;
+			right: -45%;
+		}
+
+		span {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.choice-display {
+		&.user-choice-display {
+			left: -42%;
+		}
+
+		&.computer-choice-display {
+			right: -42%;
+		}
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.choice-display {
+		span {
+			&.hide-extra-small {
+				visibility: hidden;
+			}
 		}
 	}
 }

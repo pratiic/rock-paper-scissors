@@ -1,6 +1,15 @@
 header {
 	.page-title {
 		letter-spacing: 7px;
-		margin: 3rem 0;
+		margin: 2.5rem 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	header {
+		.page-title {
+			letter-spacing: 5px;
+			font-size: 3rem;
+		}
 	}
 }

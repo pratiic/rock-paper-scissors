@@ -6,15 +6,6 @@
 	box-sizing: border-box;
 }
 
-@font-face {
-	font-family: simplifica;
-	src: url(../../assets/fonts/simplifica.ttf);
-}
-
-html {
-	font-size: 62.5%;
-}
-
 body {
 	font-family: $font-stack-primary;
 	overflow-x: hidden;
@@ -31,20 +22,50 @@ li {
 	list-style-type: none;
 }
 
-@media screen and (max-width: 1000px) {
+// @media screen and (min-width: 2000px) {
+// 	html {
+// 		font-size: 100%;
+// 	}
+// }
+
+@media screen and (max-width: 320px) {
 	html {
-		font-size: 50%;
+		font-size: 30%;
 	}
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 320px) {
 	html {
 		font-size: 40%;
 	}
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (min-width: 425px) {
 	html {
-		font-size: 35%;
+		font-size: 45%;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	html {
+		font-size: 50%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	html {
+		font-size: 62.5%;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	html {
+		font-size: 75%;
+	}
+}
+
+@media screen and (min-width: 2000px) {
+	html {
+		font-size: 90%;
 	}
 }
